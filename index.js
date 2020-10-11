@@ -1,5 +1,10 @@
 function fetchBooks() {
 
+  return fetch('https://anapioficeandfire.com/api/books', {})
+    .then(res => res.json())
+    .then(data => renderBooks(data))
+    //.catch(console.log("A fetch to the API was not found"))
+
 }
 
 function renderBooks(books) {
